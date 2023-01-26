@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LEDClock.InputPage">
+
+    <StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="NumberToggle" Text="Number 1" HorizontalOptions="CenterAndExpand" Clicked="NumberToggle_Clicked"/>
+            <Button x:Name="InvertButton" Text="Invert" HorizontalOptions="CenterAndExpand" Clicked="InvertButton_Clicked"/>
+            <Button x:Name="ClearButton" Text="Clear" HorizontalOptions="CenterAndExpand" Clicked="ClearButton_Clicked"/>
+        </StackLayout>
+        <Grid x:Name="SegmentLayout" RowDefinitions="50, 100, 50, 100, 50" ColumnDefinitions="50, 100, 50" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" IsVisible="True">
+            <Button BindingContext="0" Grid.Column="1" Grid.Row="0" Clicked="SegmentButton_Clicked" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            <Button BindingContext="1" Grid.Column="2" Grid.Row="1" Clicked="SegmentButton_Clicked" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            <Button BindingContext="2" Grid.Column="2" Grid.Row="3" Clicked="SegmentButton_Clicked" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            <Button BindingContext="3" Grid.Column="1" Grid.Row="4" Clicked="SegmentButton_Clicked" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            <Button BindingContext="4" Grid.Column="0" Grid.Row="3" Clicked="SegmentButton_Clicked" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            <Button BindingContext="5" Grid.Column="0" Grid.Row="1" Clicked="SegmentButton_Clicked" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            <Button BindingContext="6" Grid.Column="1" Grid.Row="2" Clicked="SegmentButton_Clicked" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+        </Grid>
+        <StackLayout x:Name="DotLayout" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" IsVisible="False">
+            <Button BindingContext="1" Clicked="SegmentButton_Clicked"/>
+            <Button BindingContext="0" Clicked="SegmentButton_Clicked"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

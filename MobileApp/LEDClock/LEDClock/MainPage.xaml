@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:LEDClock"
+             x:Class="LEDClock.MainPage">
+    <ContentPage.Title>Main Page</ContentPage.Title>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="SettingsIcon" IconImageSource="round_settings_white_24.png" Priority="0" Order="Primary" Clicked="Settings_Button_Clicked"/>
+    </ContentPage.ToolbarItems>
+    
+    <StackLayout VerticalOptions="FillAndExpand">
+        <Label x:Name="ConnectionLabel" Text="Not connected" TextColor="Crimson"/>
+        <Button x:Name="ShowClockButton" Text="Show clock" Clicked="ShowClockButton_Clicked" IsEnabled="False"
+                HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+        <Button x:Name="SyncTimeButton" Text="Sync time" Clicked="SyncTimeButton_Clicked"  IsEnabled="False"
+                HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+        <Button x:Name="InputButton" Text="Input mode" Clicked="InputButton_Clicked" IsEnabled="False"
+                HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+        <Button x:Name="ColourButton" Text="Colour" Clicked="ColourButton_Clicked" IsEnabled="False"
+                HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+    </StackLayout>
+
+</ContentPage>

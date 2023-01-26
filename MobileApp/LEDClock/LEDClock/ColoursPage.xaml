@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:LEDClock.Controls"
+             x:Class="LEDClock.ColoursPage">
+    <ContentPage.Title>Colours</ContentPage.Title>
+
+
+    <StackLayout>
+        <Frame
+            x:Name="ColorPickerFrame"
+            CornerRadius="8"
+            Margin="5"
+            Padding="5"
+            HasShadow="True"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+            <controls:ColorPickerControl x:Name="ColorPicker" PickedColorChanged="ColorPicker_PickedColorChanged"/>
+        </Frame>
+        <StackLayout Orientation="Horizontal" Spacing="5" Padding="5">
+            <Button x:Name="SendButton" Text="Pick a colour above" Clicked="SendButton_Clicked" HorizontalOptions="FillAndExpand"/>
+            <Button x:Name="SendHexButton" Text="Send hex" Clicked="SendHexButton_Clicked" HorizontalOptions="FillAndExpand"/>
+            <Button x:Name="OtherButton" Text="Other" Clicked="OtherButton_Clicked" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" Spacing="5" Padding="5">
+            <Button x:Name="BrightnessButton" Text="Brightness" Clicked="BrightnessButton_Clicked"/>
+            <Slider x:Name="BrightnessSlider" Minimum="0" Maximum="255" Value="255" ValueChanged="BrightnessSlider_ValueChanged" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
